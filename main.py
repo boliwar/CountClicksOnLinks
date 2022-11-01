@@ -36,9 +36,9 @@ def main():
     headers = {"Authorization": f"Bearer {bitly_access_token}"}
 
     parser = createParser()
-    namespace = parser.parse_args()
+    command_line_arguments = parser.parse_args()
 
-    input_url = namespace.url
+    input_url = command_line_arguments.url
 
     try:
         if not is_bitlink(input_url, headers):
