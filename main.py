@@ -35,7 +35,6 @@ def main():
     bitly_access_token = os.environ['BITLY_ACCESS_TOKEN']
     headers = {"Authorization": f"Bearer {bitly_access_token}"}
 
-    # input_url = input("Введите ссылку: ")
     parser = createParser()
     namespace = parser.parse_args()
 
