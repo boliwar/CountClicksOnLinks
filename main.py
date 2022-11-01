@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import argparse
 
 
-def createParser ():
+def create_parser ():
     parser = argparse.ArgumentParser()
     parser.add_argument ('url', nargs='?')
     return parser
@@ -35,7 +35,7 @@ def main():
     bitly_access_token = os.environ['BITLY_ACCESS_TOKEN']
     headers = {"Authorization": f"Bearer {bitly_access_token}"}
 
-    parser = createParser()
+    parser = create_parser()
     command_line_arguments = parser.parse_args()
 
     input_url = command_line_arguments.url
